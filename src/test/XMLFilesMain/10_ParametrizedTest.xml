@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Parametrelerle bir testi çalıştırma Test">
+       <parameter name="firstname" value="Ondia"></parameter>
+       <parameter name="password" value="OntenKumi10"></parameter>
+       <parameter name="comment" value="Bu da senin yorumun"></parameter>
+       <parameter name="age" value="19"></parameter>
+       <parameter name="isMarried" value="true"></parameter>
+
+   <classes>
+       <class name="ondia.tests.tests.C11ParametrizedTest"></class>
+   </classes>
+   </test>
+</suite>

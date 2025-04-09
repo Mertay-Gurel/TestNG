@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Depends On ve Enabled Test">
+       <classes>
+           <class name="ondia.tests.C03DependsOn"></class>
+           <class name="ondia.tests.C04Enabled"></class>
+       </classes>
+
+   </test>
+</suite>

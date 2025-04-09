@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Depends On Test">
+       <classes>
+           <class name="ondia.tests.C03DependsOn"></class>
+       </classes>
+   </test>
+</suite>
+
+        <!-- Yorum eklemek için -->
+        <!-- Projemizdeki testleri, paketleri, sınıfları veya test yöntemlerini bir XML dosyasıyla çalıştırabiliriz.
+             Bunu yapmak için, suite'den başlayarak tüm testleri uygun test hiyerarşisine göre XML formatında yazmamız gerekir.
+             Eğer istediğimiz tüm testlere erişmek için birden fazla hiyerarşi oluşturmamız gerekiyorsa,
+             sonraki hiyerarşileri uygun adımdan başlatmamız gerekecek.
+        -->
+
+        <!--
+            Eğer bir test içinde birden fazla hiyerarşi oluşturmamız gerekiyorsa,
+            uygun bir kırılma noktası belirleyip oradan hiyerarşiyi yeniden oluşturabiliriz.
+        -->

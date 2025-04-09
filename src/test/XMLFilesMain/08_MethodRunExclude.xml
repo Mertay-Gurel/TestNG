@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Selecting certain TestMethods Test">
+<!--       <groups>-->
+<!--           <run>-->
+<!--               <exclude name="Group A"></exclude>-->
+<!--           </run>-->
+<!--       </groups>-->
+        <classes>
+            <class name="ondia.tests.C10XMLFileGroupRun">
+                <methods>
+                    <exclude name="test06"></exclude>
+                    <exclude name="test05"></exclude>
+                    <exclude name="test01"></exclude>
+                </methods>
+            </class>
+        </classes>
+   </test>
+</suite>

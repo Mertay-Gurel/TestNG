@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Parametreli Test Örneği">
+        <parameter name="name" value="student"></parameter>
+        <parameter name="password" value="Password123"></parameter>
+        <parameter name="urlContains" value="https://practicetestautomation.com"></parameter>
+        <parameter name="expectedText1" value="Congratulations"></parameter>
+        <parameter name="expectedText2" value="successfully logged in"></parameter>
+        <classes>
+            <class name="ondia.tests.C12ParametrizedSampleTest">
+                <methods>
+                    <include name="parametrizedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

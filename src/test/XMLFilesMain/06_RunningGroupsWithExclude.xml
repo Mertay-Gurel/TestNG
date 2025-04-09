@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Executing Groups Test">
+       <groups>
+           <run>
+               <exclude name="Group B"> </exclude> <!-- group ismi 'Group B' olanlar exclude edilir diğer tüm methodlar çalıştırılır -->
+               <exclude name="Group A"></exclude>
+           </run>
+       </groups> 
+
+       <classes>
+           <class name="ondia.tests.C10XMLFileGroupRun"></class> <!-- Bu class içerisindeki t]m methodlar hedef olarak verilir -->
+       </classes>
+
+   </test>
+</suite>

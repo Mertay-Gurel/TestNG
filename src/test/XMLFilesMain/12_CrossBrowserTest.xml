@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Chrome Browser Test Örneği">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="ondia.tests.C16CrossBrowserTest">
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Firefox Browser Test Örneği">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="ondia.tests.C16CrossBrowserTest">
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="Edge Browser Test Örneği">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="ondia.tests.C16CrossBrowserTest">
+            </class>
+        </classes>
+    </test>
+</suite>

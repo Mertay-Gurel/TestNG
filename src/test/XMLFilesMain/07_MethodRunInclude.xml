@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Selecting certain TestMethods Test">
+        <classes>
+            <class name="ondia.tests.C09HardAndSoftAssert">
+                <methods>
+                    <include name="softAssertionTest"></include>
+                </methods>
+            </class>
+        </classes>
+   </test>
+</suite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="İlk Test Suitim">
+    <test verbose="2" preserve-order="true"
+          name="ilk XML Testim">
+        <classes>
+            <class name="ondia.tests.C01Annotations">
+            </class>
+        </classes>
+    </test>
+</suite>

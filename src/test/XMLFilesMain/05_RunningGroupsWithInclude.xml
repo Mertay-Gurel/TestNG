@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite">
+   <test name="Executing Groups Test">
+       <groups>
+           <run>
+               <include name="A"> </include> <!-- sadece group ismi 'A' olan testleri çalıştırır -->
+               <include name="Group B"></include> <!-- aynı zamanda group ismi 'Group B' olan testleri de eklemiş olduk -->
+           </run>
+       </groups> 
+
+<!--       <classes>-->
+<!--           <class name="ondia.tests.C07Groups"></class> &lt;!&ndash; Bu class içerisindeki 'A' ismindeki gruplar hedef olarak veriliyor &ndash;&gt;-->
+<!--       </classes>-->
+       <packages>
+           <package name="ondia.tests"></package>   <!-- tests paketinin içinde bu grupları arayacak -->
+       </packages>
+   </test>
+</suite>
