@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="Parallel Test Örneği" parallel="methods" thread-count="2">
         <classes>
-            <class name="ondia.tests.C17ParallelTest">
+            <class name="ondia.tests.tests.C17ParallelTest">
             </class>
         </classes>
     </test>

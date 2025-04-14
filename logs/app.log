@@ -1,0 +1,4 @@
+2025-04-14 17:25:22 [main] INFO  homework.mentoring.Logigngtest2 - Login testi başladı
+2025-04-14 17:25:22 [main] DEBUG homework.mentoring.Logigngtest2 - Kullanıcı adı: user1
+2025-04-14 17:25:22 [main] DEBUG homework.mentoring.Logigngtest2 - Şifre: 1234
+2025-04-14 17:25:23 [main] INFO  homework.mentoring.Logigngtest2 - Login başarılı!

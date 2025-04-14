@@ -1,6 +1,6 @@
 package ondia.tests.tests;
 
-import utils.TestBase;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;

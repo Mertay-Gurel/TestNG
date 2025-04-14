@@ -5,7 +5,7 @@
           name="Chrome CrossBrowser Test" >
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="ondia.tests.C22ParallelCrossBrowserTestThreadLocal"></class>
+            <class name="ondia.tests.tests.C22ParallelCrossBrowserTestThreadLocal"></class>
 
         </classes>
     </test>
@@ -13,7 +13,7 @@
           name="FireFox CrossBrowser Test" >
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="ondia.tests.C22ParallelCrossBrowserTestThreadLocal"></class>
+            <class name="ondia.tests.tests.C22ParallelCrossBrowserTestThreadLocal"></class>
 
         </classes>
     </test>

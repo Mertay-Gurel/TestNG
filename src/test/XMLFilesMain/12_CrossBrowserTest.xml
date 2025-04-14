@@ -5,7 +5,7 @@
           name="Chrome Browser Test Örneği">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
-            <class name="ondia.tests.C16CrossBrowserTest">
+            <class name="ondia.tests.tests.C16CrossBrowserTest">
             </class>
         </classes>
     </test>
@@ -13,7 +13,7 @@
           name="Firefox Browser Test Örneği">
         <parameter name="browser" value="firefox"></parameter>
         <classes>
-            <class name="ondia.tests.C16CrossBrowserTest">
+            <class name="ondia.tests.tests.C16CrossBrowserTest">
             </class>
         </classes>
     </test>
@@ -21,7 +21,7 @@
           name="Edge Browser Test Örneği">
         <parameter name="browser" value="edge"></parameter>
         <classes>
-            <class name="ondia.tests.C16CrossBrowserTest">
+            <class name="ondia.tests.tests.C16CrossBrowserTest">
             </class>
         </classes>
     </test>

@@ -9,7 +9,7 @@
         <parameter name="expectedText1" value="Congratulations"></parameter>
         <parameter name="expectedText2" value="successfully logged in"></parameter>
         <classes>
-            <class name="ondia.tests.C12ParametrizedSampleTest">
+            <class name="ondia.tests.tests.C12ParametrizedSampleTest">
                 <methods>
                     <include name="parametrizedTest"/>
                 </methods>

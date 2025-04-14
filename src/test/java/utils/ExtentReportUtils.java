@@ -2,14 +2,17 @@ package utils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -25,8 +28,9 @@ public class ExtentReportUtils extends TestBase {
     static {
 //        RAPOR ADI VE OLUŞTURULACAĞI YER
 //        YOL
-        String currentDate = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String filePath = System.getProperty("user.dir") + "\\test-output\\reports\\testReport_" + currentDate;
+        String sep = System.getProperty("file.separator");
+        String currentDate = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+        String filePath = System.getProperty("user.dir") + "\\test-output\\reports\\testReport_" + currentDate + ".html" ;
 //        HTML şablonunu oluşturmak için extent spark reporter kullanarak yolu belirle
         extentSparkReporter = new ExtentSparkReporter(filePath);
 //        Extent raporu oluştur
@@ -77,27 +81,17 @@ public class ExtentReportUtils extends TestBase {
     //    Bu metod log oluşturur VE ekran görüntüsü alır VE bunları html raporuna ekler
     public static void passAndCaptureScreenshot(String message) {
         extentTest
-                .log(Status.PASS, message)
-                .addScreenCaptureFromPath(takeScreenshot());
+                .pass(message,
+                        MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(message)).build());
     }
 
     //    Bu metod log oluşturur VE ekran görüntüsü alır VE bunları html raporuna ekler
     public static void failAndCaptureScreenshot(String message) {
         extentTest
-                .log(Status.FAIL, message)
-                .addScreenCaptureFromPath(takeScreenshot());
+                .fail( message,MediaEntityBuilder.createScreenCaptureFromPath(captureScreenshot(message)).build());
     }
 
-    /*
-    RAPORU OLUŞTURMAK İÇİN EN SONDA FLUSH KULLANILMALIDIR
-    ExtentReportUtils.flush
-    */
-    public static void flush() {
-        extentReports.flush();
-    }
-
-    public static String takeScreenshot() {
-
+    protected static String captureScreenshot(String name) {
         // 1. Ekran görüntüsünü yakalamak için getScreenShotAs yöntemine sahip TakeScreenShot sınıfı
         File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         // 2. Resmi kaydetmek için bir yol oluşturun
@@ -105,7 +99,7 @@ public class ExtentReportUtils extends TestBase {
         String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
         String fileName = "ScreenShot" + "_" + timestamp + ".png";
         String filePath = screenshotsDir + "/" + fileName;
-       // 3. Resmi dosya olarak belirtilen yola kaydedin
+        // 3. Resmi dosya olarak belirtilen yola kaydedin
         try {
             FileUtils.copyFile(image, new File(filePath));
         } catch (IOException e) {
@@ -114,5 +108,15 @@ public class ExtentReportUtils extends TestBase {
         // 4. Resim yolunu String olarak dön
         return "../screenshots/" + fileName;
 
+
+        }
+    /*
+    RAPORU OLUŞTURMAK İÇİN EN SONDA FLUSH KULLANILMALIDIR
+    ExtentReportUtils.flush
+    */
+
+    public static void flush() {
+        ExtentReportUtils.extentReports.flush();
     }
 }
+

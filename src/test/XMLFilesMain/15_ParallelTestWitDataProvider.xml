@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="Parallel Test With Data Provider" >
         <classes>
-            <class name="ondia.tests.C20DataProviderParallelTest">
+            <class name="ondia.tests.tests.C20DataProviderParallelTest">
             </class>
         </classes>
     </test>

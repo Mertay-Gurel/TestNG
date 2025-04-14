@@ -1,4 +1,4 @@
-package ondia.tests.tests.smoketest;
+package ondia.tests.tests;
 
 import utils.CrossBrowserParellelTestBase;
 import org.testng.annotations.Test;

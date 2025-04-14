@@ -1,4 +1,4 @@
-package ondia.tests.tests.smoketest;
+package ondia.tests.tests;
 
 import utils.DataProviderUtils;
 import org.openqa.selenium.By;

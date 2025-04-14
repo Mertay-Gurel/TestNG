@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 <dependencies>
@@ -57,6 +57,25 @@
         <artifactId>javafaker</artifactId>
         <version>1.0.2</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+    <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-testng</artifactId>
+        <version>2.25.0</version>
+    </dependency>
+    <!-- Log4j2 Core -->
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>2.20.0</version>
+    </dependency>
+
+    <!-- Log4j2 API -->
+    <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>2.20.0</version>
+    </dependency>
 </dependencies>
 
     <build>
@@ -65,14 +84,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.11.0</version>
             </plugin>
 
             <!-- Maven Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.5.3</version>
                 <configuration>
                     <!-- Configure parallel test execution -->
                     <parallel>methods</parallel>
@@ -80,19 +99,23 @@
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
 
 
-                    <!--Spesifik olarak çalıştırılmak istenen XML dosyası -->
-                    <!--                    <suiteXmlFiles>-->
-                    <!--                        <suiteXmlFile>XMLFiles/13_ParallelTest.xml</suiteXmlFile>-->
-                    <!--                    </suiteXmlFiles>-->
+<!--                    ;Spesifik olarak çalıştırılmak istenen XML dosyası -->
+                                       <suiteXmlFiles>
+                                            <suiteXmlFile>16_ParallelCrossBrowserTest.xml</suiteXmlFile>
+                                        </suiteXmlFiles>
 
                     <!--Spesifik olarak çalıştırılmak istenen Class-->
-                    <includes>
-                        <include>topics.C17ParallelTest</include>
-                    </includes>
+<!--                   <includes>-->
+<!--                        <include>topics.C17ParallelTest</include>-->
+<!--                    </includes>-->
 
                 </configuration>
-
-
+            </plugin>
+            <!-- Allure Report Plugin -->
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
             </plugin>
         </plugins>
     </build>
